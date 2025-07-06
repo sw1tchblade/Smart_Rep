@@ -1,7 +1,7 @@
 let pollingInterval = 40;
 let thresholdPull = 0.85;    // pulling motion
 let thresholdRelease = 0.35; // return motion
-let minInterval = 500;       // 0.5s between reps
+let minInterval = 500;       // 0.5s between rep
 
 let repCount = 0;
 let inPull = false;
