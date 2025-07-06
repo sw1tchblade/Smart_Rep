@@ -18,6 +18,3 @@ SmartRep is a modular Bangle.js smartwatch app that detects and counts repetitio
 ## Controls
 - **BTN1 / BTN3** – Scroll through exercises
 - **BTN2** – Select and start rep counter
-
-## License
-MIT
