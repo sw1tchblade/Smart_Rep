@@ -80,17 +80,13 @@ SmartRep/
 
 ## 👨‍💻 Authors
 
-- Aakash Deshmukh  
-- Lakhan Singh  
+- Lakhan Singh 
+- Aakash Deshmukh 
 - Mohit Bishnoi  
-- **Ubiquitous Systems Lab, 2025**
 
 ---
 
-## 📜 License
-
-This project is licensed under the MIT License.  
-Built for academic use and personal fitness tracking.
+Note: Built for academic use and personal fitness tracking.
 
 ---
 
