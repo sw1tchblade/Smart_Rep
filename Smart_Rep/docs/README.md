@@ -4,7 +4,7 @@ SmartRep is a modular Bangle.js smartwatch app that detects and counts repetitio
 
 ## Features
 - Tracks Bicep Curls, Push-Ups, Squats, Shoulder Press, and Lateral Raises
-- Vibration feedback after each rep
+- Vibration feedback after each target set
 - Minimalist black-and-green themed UI
 - Simple logger to collect custom training data
 
