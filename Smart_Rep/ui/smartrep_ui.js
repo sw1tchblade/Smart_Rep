@@ -1,7 +1,9 @@
 const exercises = [
   "Bench Press", "Bicep Curls", "Cable Rows",
-  "Pushups", "Shoulder Press", "Triceps Pushdown", "Squats"
+  "Lateral Raise", "Pushup", "Shoulder Press",
+  "Triceps Pushdown", "Squats"
 ];
+
 
 let selected = 0;
 let scrollOffset = 0;
