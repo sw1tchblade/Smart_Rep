@@ -1,25 +1,43 @@
-// Simple Accelerometer Logger for Bangle.js
-let isLogging = false;
+// 15-second Accelerometer Logger for Bangle.js
 let data = [];
+let duration = 15000; // 15 seconds
+let pollingRate = 40; // ms (~25Hz)
+let isLogging = false;
 
-function toggleLogging() {
-  if (!isLogging) {
-    isLogging = true;
-    data = [];
-    Bangle.setPollInterval(40);
-    Bangle.on('accel', logData);
-    g.clear(); g.drawString("Logging...", 10, 10);
-  } else {
-    isLogging = false;
-    Bangle.removeListener('accel', logData);
-    require("Storage").write("exercise_log.csv", data.join("\n"));
-    g.clear(); g.drawString("Saved.", 10, 10);
-  }
+function startLogging() {
+  if (isLogging) return;
+  isLogging = true;
+  data = [];
+
+  g.clear();
+  g.setFont("6x8", 2);
+  g.drawString("Logging for 15 sec...", 10, 40);
+
+  Bangle.setPollInterval(pollingRate);
+  Bangle.on('accel', logSample);
+
+  setTimeout(stopLogging, duration);
 }
 
-function logData(d) {
-  data.push([Date.now(), d.x.toFixed(2), d.y.toFixed(2), d.z.toFixed(2)].join(","));
+function logSample(a) {
+  data.push([Date.now(), a.x.toFixed(2), a.y.toFixed(2), a.z.toFixed(2)].join(","));
 }
 
-setWatch(toggleLogging, BTN2, { repeat: true, edge: "rising" });
-g.clear(); g.setFont("6x8", 2); g.drawString("Press BTN2 to start/stop logging", 10, 50);
+function stopLogging() {
+  isLogging = false;
+  Bangle.removeListener('accel', logSample);
+  g.clear();
+  g.setFont("6x8", 2);
+  g.drawString("Logging complete.", 10, 40);
+  g.drawString("Check IDE console.", 10, 70);
+
+  // Print CSV to console
+  console.log("timestamp,x,y,z");
+  data.forEach(line => console.log(line));
+}
+
+setWatch(startLogging, BTN2, { repeat: false, edge: "rising" });
+
+g.clear();
+g.setFont("6x8", 2);
+g.drawString("Press BTN2 to log", 10, 50);
