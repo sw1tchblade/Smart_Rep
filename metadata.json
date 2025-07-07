@@ -1,6 +1,7 @@
 {
   "id": "smartrep",
   "name": "SmartRep",
+  "version": "0.01",
   "type": "app",
   "icon": "smartrep-icon.png",
   "tags": "fitness,exercise,health",
