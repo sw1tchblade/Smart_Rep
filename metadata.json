@@ -10,13 +10,13 @@
   "storage": [
     { "name": "smartrep.app.js", "url": "smartrep.app.js" },
     { "name": "smartrep-icon.png", "url": "smartrep-icon.png" },
-    { "name": "logic/benchpress.js" },
-    { "name": "logic/bicepcurl.js" },
-    { "name": "logic/cable_rows.js" },
-    { "name": "logic/lateralraise.js" },
-    { "name": "logic/pushup.js" },
-    { "name": "logic/shoulderpress.js" },
-    { "name": "logic/tricepspushdown.js" },
-    { "name": "logic/squats.js" }
+    { "name": "logic/benchpress.js", "url": "logic/benchpress.js" },
+    { "name": "logic/bicepcurl.js", "url": "logic/bicepcurl.js" },
+    { "name": "logic/cable_rows.js", "url": "logic/cable_rows.js" },
+    { "name": "logic/lateralraise.js", "url": "logic/lateralraise.js" },
+    { "name": "logic/pushup.js", "url": "logic/pushup.js" },
+    { "name": "logic/shoulderpress.js", "url": "logic/shoulderpress.js" },
+    { "name": "logic/tricepspushdown.js", "url": "logic/tricepspushdown.js" },
+    { "name": "logic/squats.js", "url": "logic/squats.js" }
   ]
 }
